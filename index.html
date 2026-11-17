@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pari Traders | Quality Goods, Fair Prices</title>
-<meta name="description" content="Pari Traders supplies textiles, home essentials and packaged goods in High, Medium and Low quality tiers at honest wholesale prices.">
+<meta name="description" content="Pari Traders supplies cement, paints, steel, bricks, pipes and tiles for homes and construction in High, Medium and Low quality tiers at honest prices.">
 <style>
 :root {
   --ink: #0b1b2b;
@@ -601,6 +601,44 @@ p {
 @media (prefers-reduced-motion: reduce) {
   .product-card.has-media .media img { transition: none; }
   .product-card.has-media:hover .media img { transform: none; }
+}
+
+.brand-strip {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.brand-strip li {
+  display: grid;
+  place-items: center;
+  height: 96px;
+  padding: 16px;
+  background: var(--white);
+  border: 1px solid var(--paper-dim);
+  border-radius: var(--radius);
+}
+
+.brand-strip img {
+  max-width: 100%;
+  max-height: 56px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brands-section {
+  padding-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .brand-strip { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 520px) {
+  .brand-strip { grid-template-columns: repeat(2, 1fr); }
 }
 
 .filters {
@@ -1212,11 +1250,11 @@ p {
     <section class="hero">
       <div class="container">
         <div>
-          <span class="eyebrow">Wholesale &amp; Retail Suppliers</span>
+          <span class="eyebrow">Building Material Suppliers</span>
           <h1>Goods you can trust, prices you can <em>plan around</em>.</h1>
           <p class="lead">
-            For over two decades Pari Traders has supplied families, shops and offices with
-            building materials, textiles, home essentials and packaged goods — in the quality tier that fits your budget.
+            For over two decades Pari Traders has supplied homeowners, contractors and builders with
+            cement, paints, steel, bricks, pipes and tiles for homes and construction sites — in the quality tier that fits your budget.
           </p>
 
           <div class="hero-actions">
@@ -1362,7 +1400,7 @@ p {
               <span class="check" aria-hidden="true">✓</span>
               <div>
                 <h3>Wholesale rates for all</h3>
-                <p>Retail customers and shopkeepers are quoted from the same open price list.</p>
+                <p>Homeowners and contractors are quoted from the same open price list.</p>
               </div>
             </div>
           </div>
@@ -1370,9 +1408,9 @@ p {
 
         <div>
           <blockquote class="quote">
-            “We have bought fabrics from Pari Traders for eleven years. The medium grade is exactly what my tailoring
-            customers expect, and the bills are always clear.”
-            <cite>— Regular customer, textile shop</cite>
+            “We have bought cement and steel from Pari Traders for eleven years. The grade on the bill is always the grade
+            that arrives on site.”
+            <cite>— Regular customer, building contractor</cite>
           </blockquote>
         </div>
       </div>
@@ -1410,48 +1448,45 @@ p {
             <p class="price">From ₹62 <small>/ kg</small></p>
           </article>
 
-          <article class="card product-card" data-tier="high">
-            <div class="card-top">
-              <span class="icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4"/>
-                </svg>
-              </span>
-              <span class="tag">Textiles</span>
-            </div>
-            <h3>Cotton &amp; Linen Fabrics</h3>
-            <p>Dress material, bedsheets, towels and shirting in three graded qualities.</p>
-            <p class="price">From ₹240 <small>/ metre</small></p>
+          <article class="card product-card has-media" data-tier="medium">
+            <div class="media"><img src="images/bricks.jpg" alt="Stack of red bricks" loading="lazy" width="960" height="640"><span class="tag ">Medium quality</span></div>
+            <h3>Bricks &amp; Blocks</h3>
+            <p>Red clay bricks and concrete blocks for walls and boundary work.</p>
+            <p class="price">From ₹8 <small>/ piece</small></p>
           </article>
 
-          <article class="card product-card" data-tier="medium">
-            <div class="card-top">
-              <span class="icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 10h16v10H4z"/><path d="M8 10V6a4 4 0 018 0v4"/>
-                </svg>
-              </span>
-              <span class="tag">Home</span>
-            </div>
-            <h3>Home &amp; Kitchen Essentials</h3>
-            <p>Steel utensils, storage jars, spice boxes and cleaning supplies in bulk packs.</p>
-            <p class="price">From ₹95 <small>/ piece</small></p>
+          <article class="card product-card has-media" data-tier="medium">
+            <div class="media"><img src="images/pipes.jpg" alt="Stack of plastic pipes" loading="lazy" width="960" height="640"><span class="tag ">Medium quality</span></div>
+            <h3>Pipes &amp; Fittings</h3>
+            <p>PVC and CPVC pipes with bends, elbows, valves and solvent cement.</p>
+            <p class="price">From ₹120 <small>/ length</small></p>
           </article>
 
-          <article class="card product-card" data-tier="low">
-            <div class="card-top">
-              <span class="icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 8h13v8H3z"/><path d="M16 11h3l2 3v2h-5z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/>
-                </svg>
-              </span>
-              <span class="tag">Packaged</span>
-            </div>
-            <h3>Packaged Staples</h3>
-            <p>Rice, pulses, sugar and tea sourced in season and packed to order.</p>
-            <p class="price">From ₹58 <small>/ kg</small></p>
+          <article class="card product-card has-media" data-tier="low">
+            <div class="media"><img src="images/tiles.jpg" alt="Blue ceramic floor tiles" loading="lazy" width="960" height="640"><span class="tag ">Low quality</span></div>
+            <h3>Floor &amp; Wall Tiles</h3>
+            <p>Ceramic and vitrified tiles in popular sizes for homes and shops.</p>
+            <p class="price">From ₹28 <small>/ sq ft</small></p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="section brands-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Trusted names</span>
+            <h2>Brands we supply</h2>
+          </div>
+        </div>
+        <ul class="brand-strip" aria-label="Brands we supply">
+          <li><img src="images/brands/acc.png" alt="ACC Cement" loading="lazy" height="44"></li>
+          <li><img src="images/brands/adani.png" alt="Adani Group" loading="lazy" height="44"></li>
+          <li><img src="images/brands/asianpaints.png" alt="Asian Paints" loading="lazy" height="44"></li>
+          <li><img src="images/brands/berger.png" alt="Berger Paints" loading="lazy" height="44"></li>
+          <li><img src="images/brands/tatasteel.png" alt="Tata Steel" loading="lazy" height="44"></li>
+        </ul>
       </div>
     </section>
 
@@ -1463,6 +1498,24 @@ p {
         <span class="eyebrow">Catalogue</span>
         <h1>Products &amp; quality tiers</h1>
         <p class="lead">Every line below is stocked in High, Medium and Low quality. Filter the list to see what fits your budget.</p>
+      </div>
+    </section>
+
+    <section class="section brands-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Trusted names</span>
+            <h2>Brands we supply</h2>
+          </div>
+        </div>
+        <ul class="brand-strip" aria-label="Brands we supply">
+          <li><img src="images/brands/acc.png" alt="ACC Cement" loading="lazy" height="44"></li>
+          <li><img src="images/brands/adani.png" alt="Adani Group" loading="lazy" height="44"></li>
+          <li><img src="images/brands/asianpaints.png" alt="Asian Paints" loading="lazy" height="44"></li>
+          <li><img src="images/brands/berger.png" alt="Berger Paints" loading="lazy" height="44"></li>
+          <li><img src="images/brands/tatasteel.png" alt="Tata Steel" loading="lazy" height="44"></li>
+        </ul>
       </div>
     </section>
 
@@ -1550,177 +1603,6 @@ p {
             <p class="price">From ₹28 <small>/ sq ft</small></p>
           </article>
 
-          <article class="card product-card" data-tier="high">
-            <div class="card-top">
-              <span class="icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4"/>
-                </svg>
-              </span>
-              <span class="tag tag-gold">High quality</span>
-            </div>
-            <h3>Cotton &amp; Linen Fabrics</h3>
-            <p>Combed cotton, linen blends and shirting material for tailors and boutiques.</p>
-            <ul>
-              <li>60s combed cotton, pre-shrunk</li>
-              <li>Colour-fast dye lots</li>
-              <li>Cut to order from 5 metres</li>
-            </ul>
-            <p class="price">₹420 <small>/ metre</small></p>
-          </article>
-
-          <article class="card product-card" data-tier="medium">
-            <div class="card-top">
-              <span class="icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4"/>
-                </svg>
-              </span>
-              <span class="tag">Medium quality</span>
-            </div>
-            <h3>Bedsheets &amp; Towels</h3>
-            <p>Everyday household soft furnishings in single, double and king sizes.</p>
-            <ul>
-              <li>200 thread count cotton blend</li>
-              <li>Matching pillow covers included</li>
-              <li>Sold in packs of six</li>
-            </ul>
-            <p class="price">₹240 <small>/ metre</small></p>
-          </article>
-
-          <article class="card product-card" data-tier="low">
-            <div class="card-top">
-              <span class="icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4"/>
-                </svg>
-              </span>
-              <span class="tag">Low quality</span>
-            </div>
-            <h3>Bulk Shirting Rolls</h3>
-            <p>Practical stock for volume buyers, sold by the full roll only.</p>
-            <ul>
-              <li>Mixed cotton-poly blend</li>
-              <li>Standard 40 metre rolls</li>
-              <li>Shade lots cannot be split</li>
-            </ul>
-            <p class="price">₹150 <small>/ metre</small></p>
-          </article>
-
-          <article class="card product-card" data-tier="high">
-            <div class="card-top">
-              <span class="icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 10h16v10H4z"/><path d="M8 10V6a4 4 0 018 0v4"/>
-                </svg>
-              </span>
-              <span class="tag tag-gold">High quality</span>
-            </div>
-            <h3>Steel Kitchenware</h3>
-            <p>Heavy-gauge stainless steel utensils for restaurants and large kitchens.</p>
-            <ul>
-              <li>304 food-grade steel</li>
-              <li>Mirror finish, induction safe</li>
-              <li>Sold as full sets</li>
-            </ul>
-            <p class="price">₹1,150 <small>/ set</small></p>
-          </article>
-
-          <article class="card product-card" data-tier="medium">
-            <div class="card-top">
-              <span class="icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 10h16v10H4z"/><path d="M8 10V6a4 4 0 018 0v4"/>
-                </svg>
-              </span>
-              <span class="tag">Medium quality</span>
-            </div>
-            <h3>Storage &amp; Spice Boxes</h3>
-            <p>Plastic and steel storage jars, spice dabbas and rack organisers.</p>
-            <ul>
-              <li>Food-safe, seal-tested lids</li>
-              <li>Seven-piece and twelve-piece sets</li>
-              <li>Cartons of 24 available</li>
-            </ul>
-            <p class="price">₹95 <small>/ piece</small></p>
-          </article>
-
-          <article class="card product-card" data-tier="low">
-            <div class="card-top">
-              <span class="icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 10h16v10H4z"/><path d="M8 10V6a4 4 0 018 0v4"/>
-                </svg>
-              </span>
-              <span class="tag">Low quality</span>
-            </div>
-            <h3>Utility Buckets &amp; Mugs</h3>
-            <p>Basic plasticware for events, canteens and resale counters.</p>
-            <ul>
-              <li>Sold in cartons of 48</li>
-              <li>Assorted colours only</li>
-              <li>Best rate on full-carton orders</li>
-            </ul>
-            <p class="price">₹38 <small>/ piece</small></p>
-          </article>
-
-          <article class="card product-card" data-tier="high">
-            <div class="card-top">
-              <span class="icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 8h13v8H3z"/><path d="M16 11h3l2 3v2h-5z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/>
-                </svg>
-              </span>
-              <span class="tag tag-gold">High quality</span>
-            </div>
-            <h3>Packaged Staples</h3>
-            <p>Season-sourced rice, pulses, sugar and tea, packed to order.</p>
-            <ul>
-              <li>Sorted and cleaned lots</li>
-              <li>Sealed 1 kg / 5 kg packs</li>
-              <li>Monthly supply contracts available</li>
-            </ul>
-            <p class="price">₹58 <small>/ kg</small></p>
-          </article>
-
-          <article class="card product-card" data-tier="medium">
-            <div class="card-top">
-              <span class="icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M14 7h5v12h-5z"/><rect x="4" y="3" width="8" height="18" rx="2"/>
-                </svg>
-              </span>
-              <span class="tag">Medium quality</span>
-            </div>
-            <h3>Mobile &amp; Cable Accessories</h3>
-            <p>Chargers, data cables, earphones and power banks for resale counters.</p>
-            <ul>
-              <li>Tested before dispatch</li>
-              <li>Six-month replacement on DOA units</li>
-              <li>Mixed boxes of 20</li>
-            </ul>
-            <p class="price">₹140 <small>/ piece</small></p>
-          </article>
-
-          <article class="card product-card" data-tier="low">
-            <div class="card-top">
-              <span class="icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M14 7h5v12h-5z"/><rect x="4" y="3" width="8" height="18" rx="2"/>
-                </svg>
-              </span>
-              <span class="tag">Low quality</span>
-            </div>
-            <h3>Basic Hardware &amp; Tools</h3>
-            <p>Screws, hinges, hand tools and fasteners for site and workshop use.</p>
-            <ul>
-              <li>Sold by weight or box</li>
-              <li>Common sizes always in stock</li>
-              <li>No mixed-size returns</li>
-            </ul>
-            <p class="price">₹65 <small>/ box</small></p>
-          </article>
-
         </div>
 
 
@@ -1733,7 +1615,7 @@ p {
       <div class="container">
         <span class="eyebrow">Our story</span>
         <h1>A shop built on repeat customers</h1>
-        <p class="lead">Pari Traders started as a single fabric counter in 1998. Today we supply households, tailors and shopkeepers across the district.</p>
+        <p class="lead">Pari Traders started as a single building-material counter in 1998. Today we supply homeowners, contractors and hardware shops across the district.</p>
       </div>
     </section>
 
@@ -1776,17 +1658,17 @@ p {
             <div class="timeline-item">
               <span>1998</span>
               <strong>One counter, one family</strong>
-              <p>Opened as a fabric counter in the old bazaar with two grades of cotton cloth.</p>
+              <p>Opened as a small building-material counter in the old bazaar with cement and bricks.</p>
             </div>
             <div class="timeline-item">
               <span>2006</span>
-              <strong>Home essentials added</strong>
-              <p>Expanded into kitchenware and household plasticware for local families.</p>
+              <strong>Paints and steel added</strong>
+              <p>Expanded into paints, TMT steel and plumbing pipes for local builders and families.</p>
             </div>
             <div class="timeline-item">
               <span>2014</span>
               <strong>Wholesale desk</strong>
-              <p>Started supplying shopkeepers and tailors with monthly standing orders.</p>
+              <p>Started supplying contractors and hardware shops with monthly standing orders.</p>
             </div>
             <div class="timeline-item">
               <span>2024</span>
@@ -1802,11 +1684,11 @@ p {
             </article>
             <article class="card">
               <h3>Open pricing</h3>
-              <p>Retail and wholesale customers are quoted from the same list. No surprise line items.</p>
+              <p>Homeowners and contractors are quoted from the same list. No surprise line items.</p>
             </article>
             <article class="card">
               <h3>Dependable supply</h3>
-              <p>Standing orders are confirmed weekly so shops are not left short before a season.</p>
+              <p>Standing orders are confirmed weekly so sites are not left short mid-construction.</p>
             </article>
           </div>
         </div>
@@ -1821,7 +1703,7 @@ p {
       <div class="footer-grid">
         <div>
           <h4>Pari Traders</h4>
-          <p>Family-run wholesale and retail traders since 1998. Cement, paints, steel, textiles, home essentials and packaged goods in three honest quality tiers.</p>
+          <p>Family-run wholesale and retail traders since 1998. Cement, paints, steel, bricks, pipes and tiles for homes and construction, in three honest quality tiers.</p>
         </div>
 
         <div>
@@ -1837,10 +1719,8 @@ p {
           <h4>Popular</h4>
           <ul class="footer-links">
             <li><a href="#products">Cement &amp; paints</a></li>
-            <li><a href="#products">Textiles</a></li>
-            <li><a href="#products">Home &amp; kitchen</a></li>
-            <li><a href="#products">Packaged staples</a></li>
-            <li><a href="#products">Building materials</a></li>
+            <li><a href="#products">Steel &amp; bricks</a></li>
+            <li><a href="#products">Pipes &amp; tiles</a></li>
           </ul>
         </div>
 
@@ -1855,7 +1735,7 @@ p {
     <div class="footer-bottom">
       <div class="container">
         <span>&copy; <span data-year>2026</span> Pari Traders. All rights reserved.</span>
-        <span>Photos: <a href="https://commons.wikimedia.org" rel="noopener">Wikimedia Commons</a> (CC BY, CC BY-SA, public domain)</span>
+        <span>Photos: <a href="https://commons.wikimedia.org" rel="noopener">Wikimedia Commons</a>. Brand logos belong to their owners.</span>
       </div>
     </div>
   </footer>
