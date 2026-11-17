@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer Enquiry | Pari Traders</title>
+  <meta name="description" content="Send your name, phone number, product and preferred quality tier to Pari Traders and get rates the same day.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">PT</span>
+        <span class="brand-text">
+          Pari Traders
+          <small>Since 1998</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active" aria-current="page">Contact</a>
+        <a href="contact.html" class="nav-cta">Enquire Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Customer information form</span>
+        <h1>Tell us what you need</h1>
+        <p class="lead">Fill in your details and requirement. We reply with rates and availability the same working day.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-layout">
+
+        <div class="panel">
+          <form id="customer-form" novalidate>
+
+            <h2 style="font-size: 1.4rem;">Enquiry details</h2>
+            <p style="color: var(--muted); font-size: 0.92rem; margin-bottom: 24px;">
+              Fields marked <span style="color: var(--danger);">*</span> are required.
+            </p>
+
+            <div class="field">
+              <label for="name">Customer name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" placeholder="e.g. Anjali Sharma" autocomplete="name" required>
+              <span class="error" role="alert"></span>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="phone">Phone number <span class="req">*</span></label>
+                <input type="tel" id="phone" name="phone" inputmode="numeric" placeholder="10-digit mobile number" autocomplete="tel" maxlength="10" required>
+                <span class="hint">We call or WhatsApp on this number.</span>
+                <span class="error" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="product">Product category <span class="req">*</span></label>
+                <select id="product" name="product" required>
+                  <option value="">Select a category</option>
+                  <option>Textiles &amp; fabrics</option>
+                  <option>Bedsheets &amp; towels</option>
+                  <option>Home &amp; kitchen</option>
+                  <option>Packaged staples</option>
+                  <option>Electronics accessories</option>
+                  <option>Hardware &amp; tools</option>
+                  <option>Other (mentioned below)</option>
+                </select>
+                <span class="error" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="quality">Product quality <span class="req">*</span></label>
+                <select id="quality" name="quality" required>
+                  <option value="">Select quality</option>
+                  <option>High Quality</option>
+                  <option>Medium Quality</option>
+                  <option>Low Quality</option>
+                </select>
+                <span class="error" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" step="1" placeholder="e.g. 20">
+                <span class="hint">Metres, pieces or kg — mention the unit below.</span>
+                <span class="error" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">Requirement details</label>
+              <textarea id="message" name="message" placeholder="Sizes, colours, delivery date or any specific requirement"></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Submit enquiry</button>
+              <button type="reset" class="btn btn-danger">Reset form</button>
+            </div>
+          </form>
+
+          <div class="form-success" role="status" aria-live="polite">
+            <span class="check-big" aria-hidden="true">✓</span>
+            <h2 style="margin-bottom: 6px;">Enquiry received</h2>
+            <p style="color: var(--muted); margin: 0;">Thank you — our team will contact you on the number provided.</p>
+
+            <div class="summary"></div>
+
+            <div class="form-actions" style="justify-content: center;">
+              <button type="button" class="btn btn-primary" data-send-another>Send another enquiry</button>
+              <a href="products.html" class="btn btn-ghost">Back to products</a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="panel">
+          <h3 style="font-size: 1.05rem; font-family: var(--font-body); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);">Shop details</h3>
+
+          <dl class="info-list">
+            <div>
+              <dt>Address</dt>
+              <dd>Shop No. 14, Main Bazaar Road,<br>Near Old Bus Stand</dd>
+            </div>
+            <div>
+              <dt>Phone</dt>
+              <dd><a href="tel:+919876543210">+91 98765 43210</a></dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:hello@paritraders.example">hello@paritraders.example</a></dd>
+            </div>
+            <div>
+              <dt>Opening hours</dt>
+              <dd>Monday – Saturday<br>9:30 am – 8:00 pm<br>Sunday closed</dd>
+            </div>
+            <div>
+              <dt>Delivery</dt>
+              <dd>Same-city delivery in 24 hours.<br>Courier dispatch within 48 hours.</dd>
+            </div>
+          </dl>
+
+          <a href="products.html" class="btn btn-ghost" style="margin-top: 24px; width: 100%;">See the catalogue</a>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Pari Traders</h4>
+          <p>Family-run wholesale and retail traders since 1998. Textiles, home essentials and packaged goods in three honest quality tiers.</p>
+        </div>
+
+        <div>
+          <h4>Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Popular</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">Textiles</a></li>
+            <li><a href="products.html">Home &amp; kitchen</a></li>
+            <li><a href="products.html">Packaged staples</a></li>
+            <li><a href="products.html">Hardware &amp; tools</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Visit the shop</h4>
+          <p>Shop No. 14, Main Bazaar Road,<br>Near Old Bus Stand</p>
+          <p>Mon – Sat, 9:30 am – 8:00 pm</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <span>&copy; <span data-year>2026</span> Pari Traders. All rights reserved.</span>
+        <span>Made with care for our customers.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
