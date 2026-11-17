@@ -1,0 +1,2107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pari Traders | Quality Goods, Fair Prices</title>
+<meta name="description" content="Pari Traders supplies textiles, home essentials and packaged goods in High, Medium and Low quality tiers at honest wholesale prices.">
+<style>
+:root {
+  --ink: #0b1b2b;
+  --ink-soft: #14293d;
+  --ink-line: #21394f;
+  --gold: #c8a24a;
+  --gold-soft: #e6cf94;
+  --paper: #f7f4ee;
+  --paper-dim: #efe9dd;
+  --white: #ffffff;
+  --muted: #5d6b79;
+  --danger: #b42318;
+  --success: #1f7a4d;
+  --radius: 14px;
+  --radius-sm: 10px;
+  --shadow: 0 18px 40px -24px rgba(11, 27, 43, 0.5);
+  --max: 1140px;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: clamp(2.1rem, 5vw, 3.4rem);
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+
+.lead {
+  font-size: 1.075rem;
+  color: var(--muted);
+  max-width: 56ch;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(11, 27, 43, 0.97);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--ink-line);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 74px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white);
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: linear-gradient(140deg, var(--gold), #9d7a2e);
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+}
+
+.brand-text {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-text small {
+  font-family: var(--font-body);
+  font-size: 0.66rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  margin-top: 3px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.site-nav a {
+  color: #cfdae5;
+  padding: 9px 14px;
+  border-radius: 999px;
+  font-size: 0.93rem;
+  font-weight: 500;
+  transition: color 0.18s ease, background 0.18s ease;
+}
+
+.site-nav a:hover {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.site-nav a.active {
+  color: var(--white);
+  background: rgba(200, 162, 74, 0.16);
+}
+
+.site-nav .nav-cta {
+  margin-left: 8px;
+  color: var(--ink);
+  background: var(--gold);
+  font-weight: 700;
+}
+
+.site-nav .nav-cta:hover {
+  background: var(--gold-soft);
+  color: var(--ink);
+}
+
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 42px;
+  border: 1px solid var(--ink-line);
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--white);
+  margin: 4px 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.btn-primary:hover {
+  background: var(--gold-soft);
+}
+
+.btn-outline {
+  border-color: var(--ink-line);
+  color: var(--white);
+}
+
+.btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold-soft);
+}
+
+.btn-ghost {
+  border-color: rgba(11, 27, 43, 0.2);
+  color: var(--ink);
+}
+
+.btn-ghost:hover {
+  border-color: var(--ink);
+}
+
+.btn-danger {
+  background: transparent;
+  border-color: rgba(180, 35, 24, 0.35);
+  color: var(--danger);
+}
+
+.btn-danger:hover {
+  background: rgba(180, 35, 24, 0.06);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  background:
+    radial-gradient(900px 420px at 82% -10%, rgba(200, 162, 74, 0.25), transparent 65%),
+    linear-gradient(180deg, var(--ink) 0%, var(--ink-soft) 100%);
+  color: var(--white);
+  padding: clamp(56px, 9vw, 104px) 0 clamp(48px, 7vw, 80px);
+  overflow: hidden;
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+}
+
+.hero h1 {
+  color: var(--white);
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--gold-soft);
+}
+
+.hero .lead {
+  color: #b8c6d4;
+  font-size: 1.12rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.hero-visual {
+  position: relative;
+  padding: 26px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+  box-shadow: var(--shadow);
+}
+
+.hero-visual::after {
+  content: "";
+  position: absolute;
+  inset: 14px -14px -14px 14px;
+  border: 1px solid rgba(200, 162, 74, 0.35);
+  border-radius: var(--radius);
+  z-index: -1;
+}
+
+.hero-visual h3 {
+  font-size: 0.78rem;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--gold-soft);
+  margin-bottom: 16px;
+}
+
+.tier-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 13px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.tier-row span:first-child {
+  font-weight: 600;
+}
+
+.tier-row .tier-note {
+  font-size: 0.84rem;
+  color: #9fb0bf;
+}
+
+.tier-dots {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.tier-dots i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.tier-dots i.on {
+  background: var(--gold);
+}
+
+/* ---------- Stats ---------- */
+
+.stats {
+  background: var(--white);
+  border-bottom: 1px solid var(--paper-dim);
+}
+
+.stats .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.stat {
+  text-align: center;
+  padding: 8px 6px;
+  border-right: 1px solid var(--paper-dim);
+}
+
+.stat:last-child {
+  border-right: 0;
+}
+
+.stat strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  color: var(--ink);
+}
+
+.stat span {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+/* ---------- Sections ---------- */
+
+.section {
+  padding: clamp(52px, 7vw, 88px) 0;
+}
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 38px;
+}
+
+.section-head p {
+  margin: 0;
+}
+
+.section-alt {
+  background: var(--white);
+  border-top: 1px solid var(--paper-dim);
+  border-bottom: 1px solid var(--paper-dim);
+}
+
+.section-dark {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.section-dark .lead,
+.section-dark p {
+  color: #b8c6d4;
+}
+
+.section-dark h2 {
+  color: var(--white);
+}
+
+/* ---------- Cards & grids ---------- */
+
+.grid {
+  display: grid;
+  gap: 22px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--paper-dim);
+  border-radius: var(--radius);
+  padding: 26px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: rgba(200, 162, 74, 0.5);
+}
+
+.card h3 {
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 0.94rem;
+  margin-bottom: 0;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.icon-badge {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(200, 162, 74, 0.14);
+  color: #8a6a23;
+  font-size: 1.25rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: rgba(11, 27, 43, 0.06);
+  color: var(--ink);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tag-gold {
+  background: rgba(200, 162, 74, 0.18);
+  color: #7d5f1e;
+}
+
+/* ---------- Product cards ---------- */
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.product-card .price {
+  font-family: var(--font-display);
+  font-size: 1.28rem;
+  color: var(--ink);
+  margin-top: auto;
+}
+
+.product-card .price small {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.product-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 7px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.product-card li::before {
+  content: "✓";
+  color: var(--gold);
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.filters button {
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(11, 27, 43, 0.16);
+  background: var(--white);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 0.87rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+
+.filters button:hover {
+  border-color: var(--ink);
+}
+
+.filters button.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--white);
+}
+
+[data-tier].is-hidden {
+  display: none;
+}
+
+/* ---------- Quality tiers ---------- */
+
+.tier-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.tier-card .tier-label {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.tier-card .tier-sub {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.tier-card.highlight {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--white);
+}
+
+.tier-card.highlight .tier-sub,
+.tier-card.highlight p {
+  color: #b8c6d4;
+}
+
+.tier-card.highlight .icon-badge {
+  background: rgba(200, 162, 74, 0.2);
+  color: var(--gold-soft);
+}
+
+/* ---------- Feature list ---------- */
+
+.feature-list {
+  display: grid;
+  gap: 18px;
+}
+
+.feature {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.feature .check {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(200, 162, 74, 0.16);
+  color: #8a6a23;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.feature h3 {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  margin-bottom: 2px;
+}
+
+.feature p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ---------- CTA band ---------- */
+
+.cta-band {
+  background: linear-gradient(120deg, var(--ink) 0%, #1c3850 100%);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: clamp(28px, 5vw, 44px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  box-shadow: var(--shadow);
+}
+
+.cta-band h2 {
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.cta-band p {
+  margin: 0;
+  color: #b8c6d4;
+  font-size: 0.96rem;
+}
+
+/* ---------- Page header ---------- */
+
+.page-head {
+  background:
+    radial-gradient(700px 320px at 90% 0%, rgba(200, 162, 74, 0.22), transparent 70%),
+    var(--ink);
+  color: var(--white);
+  padding: clamp(46px, 7vw, 78px) 0;
+}
+
+.page-head h1 {
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.page-head .lead {
+  color: #b8c6d4;
+  margin: 0;
+}
+
+/* ---------- Contact / form ---------- */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.panel {
+  background: var(--white);
+  border: 1px solid var(--paper-dim);
+  border-radius: var(--radius);
+  padding: clamp(24px, 4vw, 36px);
+  box-shadow: var(--shadow);
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  font-size: 0.86rem;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.field label .req {
+  color: var(--danger);
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d8d2c6;
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 0.96rem;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 108px;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(200, 162, 74, 0.22);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #97a1ab;
+}
+
+.field .hint {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.field .error {
+  display: none;
+  font-size: 0.78rem;
+  color: var(--danger);
+  margin-top: 6px;
+}
+
+.field.has-error input,
+.field.has-error select,
+.field.has-error textarea {
+  border-color: var(--danger);
+  background: #fdf4f3;
+}
+
+.field.has-error .error {
+  display: block;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 16px 8px;
+}
+
+.form-success.show {
+  display: block;
+}
+
+.form-success .check-big {
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: rgba(31, 122, 77, 0.12);
+  color: var(--success);
+  font-size: 1.7rem;
+}
+
+.summary {
+  margin: 22px auto 0;
+  max-width: 440px;
+  text-align: left;
+  border: 1px solid var(--paper-dim);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  background: var(--paper);
+  display: grid;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.summary div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.summary strong {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.info-list {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+}
+
+.info-list div {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--paper-dim);
+}
+
+.info-list div:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.info-list dt {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.info-list dd {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* ---------- About timeline ---------- */
+
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 26px;
+  padding-left: 28px;
+  border-left: 1px solid var(--paper-dim);
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -34px;
+  top: 7px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 4px rgba(200, 162, 74, 0.18);
+}
+
+.timeline-item strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--ink);
+}
+
+.timeline-item span {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.timeline-item p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 5vw, 60px);
+  align-items: center;
+}
+
+.quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  line-height: 1.45;
+  color: var(--ink);
+  border-left: 3px solid var(--gold);
+  padding-left: 20px;
+  margin: 0;
+}
+
+.quote cite {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background: #081521;
+  color: #b8c6d4;
+  padding: 56px 0 0;
+  margin-top: 72px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 32px;
+  padding-bottom: 40px;
+}
+
+.site-footer h4 {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  margin: 0 0 14px;
+}
+
+.site-footer p {
+  font-size: 0.9rem;
+  color: #93a3b2;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 9px;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: var(--gold-soft);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 18px 0;
+  font-size: 0.82rem;
+}
+
+.footer-bottom .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  color: #7e8e9c;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .hero .container,
+  .split,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    max-width: 520px;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat {
+    border-right: 0;
+    border-bottom: 1px solid var(--paper-dim);
+    padding-bottom: 20px;
+  }
+
+  .stat:nth-last-child(-n + 2) {
+    border-bottom: 0;
+    padding-bottom: 8px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 14px 20px 20px;
+    background: var(--ink);
+    border-bottom: 1px solid var(--ink-line);
+    display: none;
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+
+  .site-nav .nav-cta {
+    margin-left: 0;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .site-header {
+    position: sticky;
+  }
+
+  .header-inner {
+    position: relative;
+  }
+}
+
+@media (max-width: 620px) {
+  .grid-3,
+  .grid-2,
+  .field-row,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions .btn,
+  .form-actions .btn {
+    flex: 1 1 100%;
+  }
+
+  .cta-band {
+    text-align: left;
+  }
+
+  .section-head {
+    margin-bottom: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}
+
+
+.page { display: none; }
+.page.active { display: block; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#home">
+      <span class="brand-mark">PT</span>
+      <span class="brand-text">
+        Pari Traders
+        <small>Since 1998</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-cta">Enquire Now</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page active" id="page-home" data-page="home">
+
+    <section class="hero">
+      <div class="container">
+        <div>
+          <span class="eyebrow">Wholesale &amp; Retail Suppliers</span>
+          <h1>Goods you can trust, prices you can <em>plan around</em>.</h1>
+          <p class="lead">
+            For over two decades Pari Traders has supplied families, shops and offices with
+            textiles, home essentials and packaged goods — in the quality tier that fits your budget.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Place an Enquiry</a>
+            <a href="#products" class="btn btn-outline">Browse Products</a>
+          </div>
+        </div>
+
+        <aside class="hero-visual" aria-label="Our quality tiers">
+          <h3>Choose your quality</h3>
+
+          <div class="tier-row">
+            <span>High Quality</span>
+            <span class="tier-dots" aria-hidden="true">
+              <i class="on"></i><i class="on"></i><i class="on"></i>
+            </span>
+          </div>
+
+          <div class="tier-row">
+            <span>Medium Quality</span>
+            <span class="tier-dots" aria-hidden="true">
+              <i class="on"></i><i class="on"></i><i></i>
+            </span>
+          </div>
+
+          <div class="tier-row">
+            <span>Low Quality</span>
+            <span class="tier-dots" aria-hidden="true">
+              <i class="on"></i><i></i><i></i>
+            </span>
+          </div>
+
+          <div class="tier-row">
+            <span>Same price list</span>
+            <span class="tier-note">for every tier</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container">
+        <div class="stat">
+          <strong>27+</strong>
+          <span>Years trading</span>
+        </div>
+        <div class="stat">
+          <strong>1,200+</strong>
+          <span>Regular customers</span>
+        </div>
+        <div class="stat">
+          <strong>40+</strong>
+          <span>Product lines</span>
+        </div>
+        <div class="stat">
+          <strong>3</strong>
+          <span>Quality tiers</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Quality tiers</span>
+            <h2>One shop, three standards</h2>
+            <p class="lead">Every product line is stocked in three grades, so you never pay for more than you need.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card tier-card highlight">
+            <div class="card-top">
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3l2.6 5.3 5.9.9-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.2l5.9-.9L12 3z"/>
+                </svg>
+              </span>
+              <span class="tag tag-gold">Premium</span>
+            </div>
+            <span class="tier-label">High Quality</span>
+            <span class="tier-sub">Best finish</span>
+            <p>Long-lasting materials, tighter stitching and stricter checks. The default choice for gifting and resale.</p>
+          </article>
+
+          <article class="card tier-card">
+            <div class="card-top">
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 7h16M4 12h16M4 17h10"/>
+                </svg>
+              </span>
+              <span class="tag">Balanced</span>
+            </div>
+            <span class="tier-label">Medium Quality</span>
+            <span class="tier-sub">Best value</span>
+            <p>Everyday goods with solid build quality at a lower price point. Our most ordered tier for households and shops.</p>
+          </article>
+
+          <article class="card tier-card">
+            <div class="card-top">
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3v18M5 10l7-7 7 7"/>
+                </svg>
+              </span>
+              <span class="tag">Budget</span>
+            </div>
+            <span class="tier-label">Low Quality</span>
+            <span class="tier-sub">Lowest price</span>
+            <p>Practical stock for bulk buyers where volume matters more than finish. Quoted openly, never swapped silently.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">Why us</span>
+          <h2>A trader that answers the phone</h2>
+          <p class="lead">No hidden substitutions, no surprise invoices. You order a quality tier and receive exactly that tier.</p>
+
+          <div class="feature-list" style="margin-top: 26px;">
+            <div class="feature">
+              <span class="check" aria-hidden="true">✓</span>
+              <div>
+                <h3>Honest grading</h3>
+                <p>Each lot is sorted before dispatch, so the tier you pick is the tier that arrives.</p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <span class="check" aria-hidden="true">✓</span>
+              <div>
+                <h3>Same-week dispatch</h3>
+                <p>Local deliveries within the city and courier dispatch across the state within 48 hours.</p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <span class="check" aria-hidden="true">✓</span>
+              <div>
+                <h3>Wholesale rates for all</h3>
+                <p>Retail customers and shopkeepers are quoted from the same open price list.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <blockquote class="quote">
+            “We have bought fabrics from Pari Traders for eleven years. The medium grade is exactly what my tailoring
+            customers expect, and the bills are always clear.”
+            <cite>— Regular customer, textile shop</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Popular lines</span>
+            <h2>What we stock</h2>
+          </div>
+          <a href="#products" class="btn btn-ghost">View all products</a>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card product-card" data-tier="high">
+            <div class="card-top">
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4"/>
+                </svg>
+              </span>
+              <span class="tag">Textiles</span>
+            </div>
+            <h3>Cotton &amp; Linen Fabrics</h3>
+            <p>Dress material, bedsheets, towels and shirting in three graded qualities.</p>
+            <p class="price">From ₹240 <small>/ metre</small></p>
+            <a href="#contact" class="btn btn-ghost">Ask for rates</a>
+          </article>
+
+          <article class="card product-card" data-tier="medium">
+            <div class="card-top">
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 10h16v10H4z"/><path d="M8 10V6a4 4 0 018 0v4"/>
+                </svg>
+              </span>
+              <span class="tag">Home</span>
+            </div>
+            <h3>Home &amp; Kitchen Essentials</h3>
+            <p>Steel utensils, storage jars, spice boxes and cleaning supplies in bulk packs.</p>
+            <p class="price">From ₹95 <small>/ piece</small></p>
+            <a href="#contact" class="btn btn-ghost">Ask for rates</a>
+          </article>
+
+          <article class="card product-card" data-tier="low">
+            <div class="card-top">
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 8h13v8H3z"/><path d="M16 11h3l2 3v2h-5z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/>
+                </svg>
+              </span>
+              <span class="tag">Packaged</span>
+            </div>
+            <h3>Packaged Staples</h3>
+            <p>Rice, pulses, sugar and tea sourced in season and packed to order.</p>
+            <p class="price">From ₹58 <small>/ kg</small></p>
+            <a href="#contact" class="btn btn-ghost">Ask for rates</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2>Share your requirement, get a quote</h2>
+            <p>Tell us the product, the quality tier and the quantity — we reply with rates the same day.</p>
+          </div>
+          <a href="#contact" class="btn btn-primary">Fill the enquiry form</a>
+        </div>
+      </div>
+    </section>
+
+  </section><section class="page" id="page-products" data-page="products">
+
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Catalogue</span>
+        <h1>Products &amp; quality tiers</h1>
+        <p class="lead">Every line below is stocked in High, Medium and Low quality. Filter the list to see what fits your budget.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <div class="filters" role="group" aria-label="Filter products by quality">
+          <button type="button" data-filter="all" class="active">All products</button>
+          <button type="button" data-filter="high">High quality</button>
+          <button type="button" data-filter="medium">Medium quality</button>
+          <button type="button" data-filter="low">Low quality</button>
+        </div>
+
+        <div class="grid grid-3">
+
+          <article class="card product-card" data-tier="high">
+            <div class="card-top">
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4"/>
+                </svg>
+              </span>
+              <span class="tag tag-gold">High quality</span>
+            </div>
+            <h3>Cotton &amp; Linen Fabrics</h3>
+            <p>Combed cotton, linen blends and shirting material for tailors and boutiques.</p>
+            <ul>
+              <li>60s combed cotton, pre-shrunk</li>
+              <li>Colour-fast dye lots</li>
+              <li>Cut to order from 5 metres</li>
+            </ul>
+            <p class="price">₹420 <small>/ metre</small></p>
+            <a href="#contact" class="btn btn-ghost">Request quote</a>
+          </article>
+
+          <article class="card product-card" data-tier="medium">
+            <div class="card-top">
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4"/>
+                </svg>
+              </span>
+              <span class="tag">Medium quality</span>
+            </div>
+            <h3>Bedsheets &amp; Towels</h3>
+            <p>Everyday household soft furnishings in single, double and king sizes.</p>
+            <ul>
+              <li>200 thread count cotton blend</li>
+              <li>Matching pillow covers included</li>
+              <li>Sold in packs of six</li>
+            </ul>
+            <p class="price">₹240 <small>/ metre</small></p>
+            <a href="#contact" class="btn btn-ghost">Request quote</a>
+          </article>
+
+          <article class="card product-card" data-tier="low">
+            <div class="card-top">
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4"/>
+                </svg>
+              </span>
+              <span class="tag">Low quality</span>
+            </div>
+            <h3>Bulk Shirting Rolls</h3>
+            <p>Practical stock for volume buyers, sold by the full roll only.</p>
+            <ul>
+              <li>Mixed cotton-poly blend</li>
+              <li>Standard 40 metre rolls</li>
+              <li>Shade lots cannot be split</li>
+            </ul>
+            <p class="price">₹150 <small>/ metre</small></p>
+            <a href="#contact" class="btn btn-ghost">Request quote</a>
+          </article>
+
+          <article class="card product-card" data-tier="high">
+            <div class="card-top">
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 10h16v10H4z"/><path d="M8 10V6a4 4 0 018 0v4"/>
+                </svg>
+              </span>
+              <span class="tag tag-gold">High quality</span>
+            </div>
+            <h3>Steel Kitchenware</h3>
+            <p>Heavy-gauge stainless steel utensils for restaurants and large kitchens.</p>
+            <ul>
+              <li>304 food-grade steel</li>
+              <li>Mirror finish, induction safe</li>
+              <li>Sold as full sets</li>
+            </ul>
+            <p class="price">₹1,150 <small>/ set</small></p>
+            <a href="#contact" class="btn btn-ghost">Request quote</a>
+          </article>
+
+          <article class="card product-card" data-tier="medium">
+            <div class="card-top">
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 10h16v10H4z"/><path d="M8 10V6a4 4 0 018 0v4"/>
+                </svg>
+              </span>
+              <span class="tag">Medium quality</span>
+            </div>
+            <h3>Storage &amp; Spice Boxes</h3>
+            <p>Plastic and steel storage jars, spice dabbas and rack organisers.</p>
+            <ul>
+              <li>Food-safe, seal-tested lids</li>
+              <li>Seven-piece and twelve-piece sets</li>
+              <li>Cartons of 24 available</li>
+            </ul>
+            <p class="price">₹95 <small>/ piece</small></p>
+            <a href="#contact" class="btn btn-ghost">Request quote</a>
+          </article>
+
+          <article class="card product-card" data-tier="low">
+            <div class="card-top">
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 10h16v10H4z"/><path d="M8 10V6a4 4 0 018 0v4"/>
+                </svg>
+              </span>
+              <span class="tag">Low quality</span>
+            </div>
+            <h3>Utility Buckets &amp; Mugs</h3>
+            <p>Basic plasticware for events, canteens and resale counters.</p>
+            <ul>
+              <li>Sold in cartons of 48</li>
+              <li>Assorted colours only</li>
+              <li>Best rate on full-carton orders</li>
+            </ul>
+            <p class="price">₹38 <small>/ piece</small></p>
+            <a href="#contact" class="btn btn-ghost">Request quote</a>
+          </article>
+
+          <article class="card product-card" data-tier="high">
+            <div class="card-top">
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 8h13v8H3z"/><path d="M16 11h3l2 3v2h-5z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/>
+                </svg>
+              </span>
+              <span class="tag tag-gold">High quality</span>
+            </div>
+            <h3>Packaged Staples</h3>
+            <p>Season-sourced rice, pulses, sugar and tea, packed to order.</p>
+            <ul>
+              <li>Sorted and cleaned lots</li>
+              <li>Sealed 1 kg / 5 kg packs</li>
+              <li>Monthly supply contracts available</li>
+            </ul>
+            <p class="price">₹58 <small>/ kg</small></p>
+            <a href="#contact" class="btn btn-ghost">Request quote</a>
+          </article>
+
+          <article class="card product-card" data-tier="medium">
+            <div class="card-top">
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 7h5v12h-5z"/><rect x="4" y="3" width="8" height="18" rx="2"/>
+                </svg>
+              </span>
+              <span class="tag">Medium quality</span>
+            </div>
+            <h3>Mobile &amp; Cable Accessories</h3>
+            <p>Chargers, data cables, earphones and power banks for resale counters.</p>
+            <ul>
+              <li>Tested before dispatch</li>
+              <li>Six-month replacement on DOA units</li>
+              <li>Mixed boxes of 20</li>
+            </ul>
+            <p class="price">₹140 <small>/ piece</small></p>
+            <a href="#contact" class="btn btn-ghost">Request quote</a>
+          </article>
+
+          <article class="card product-card" data-tier="low">
+            <div class="card-top">
+              <span class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 7h5v12h-5z"/><rect x="4" y="3" width="8" height="18" rx="2"/>
+                </svg>
+              </span>
+              <span class="tag">Low quality</span>
+            </div>
+            <h3>Basic Hardware &amp; Tools</h3>
+            <p>Screws, hinges, hand tools and fasteners for site and workshop use.</p>
+            <ul>
+              <li>Sold by weight or box</li>
+              <li>Common sizes always in stock</li>
+              <li>No mixed-size returns</li>
+            </ul>
+            <p class="price">₹65 <small>/ box</small></p>
+            <a href="#contact" class="btn btn-ghost">Request quote</a>
+          </article>
+
+        </div>
+
+        <div style="margin-top: 44px;">
+          <div class="cta-band">
+            <div>
+              <h2>Need something not listed?</h2>
+              <p>We source to order. Send the item, quality tier and quantity and we will confirm availability and rate.</p>
+            </div>
+            <a href="#contact" class="btn btn-primary">Send an enquiry</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </section><section class="page" id="page-about" data-page="about">
+
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Our story</span>
+        <h1>A shop built on repeat customers</h1>
+        <p class="lead">Pari Traders started as a single fabric counter in 1998. Today we supply households, tailors and shopkeepers across the district.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">Why we exist</span>
+          <h2>Honest grading, open prices</h2>
+          <p class="lead">
+            Quality in this trade usually means whatever the seller says it means. We built the shop around the
+            opposite idea: three clearly defined tiers, the same price list for everyone, and a bill that matches
+            what was promised.
+          </p>
+          <p>
+            That approach costs us a little on each sale and earns us customers who come back for a decade. Most of
+            our business now comes from referrals and standing monthly orders.
+          </p>
+        </div>
+
+        <div>
+          <blockquote class="quote">
+            “If a customer has to ask twice whether they were treated fairly, we have already lost them.”
+            <cite>— Founding principle, Pari Traders</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Milestones</span>
+            <h2>How we grew</h2>
+          </div>
+        </div>
+
+        <div class="split" style="align-items: start;">
+          <div class="timeline">
+            <div class="timeline-item">
+              <span>1998</span>
+              <strong>One counter, one family</strong>
+              <p>Opened as a fabric counter in the old bazaar with two grades of cotton cloth.</p>
+            </div>
+            <div class="timeline-item">
+              <span>2006</span>
+              <strong>Home essentials added</strong>
+              <p>Expanded into kitchenware and household plasticware for local families.</p>
+            </div>
+            <div class="timeline-item">
+              <span>2014</span>
+              <strong>Wholesale desk</strong>
+              <p>Started supplying shopkeepers and tailors with monthly standing orders.</p>
+            </div>
+            <div class="timeline-item">
+              <span>2024</span>
+              <strong>Three-tier catalogue</strong>
+              <p>Standardised every product line into High, Medium and Low quality with published rates.</p>
+            </div>
+          </div>
+
+          <div class="grid" style="gap: 16px;">
+            <article class="card">
+              <h3>Fair grading</h3>
+              <p>Lots are sorted in-house before dispatch, so the tier on the invoice is the tier in the box.</p>
+            </article>
+            <article class="card">
+              <h3>Open pricing</h3>
+              <p>Retail and wholesale customers are quoted from the same list. No surprise line items.</p>
+            </article>
+            <article class="card">
+              <h3>Dependable supply</h3>
+              <p>Standing orders are confirmed weekly so shops are not left short before a season.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2>Come see the stock yourself</h2>
+            <p>The shop is open Monday to Saturday, 9:30 am to 8:00 pm. Enquiries are answered the same day.</p>
+          </div>
+          <a href="#contact" class="btn btn-primary">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+  </section><section class="page" id="page-contact" data-page="contact">
+
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Customer information form</span>
+        <h1>Tell us what you need</h1>
+        <p class="lead">Fill in your details and requirement. We reply with rates and availability the same working day.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-layout">
+
+        <div class="panel">
+          <form id="customer-form" novalidate>
+
+            <h2 style="font-size: 1.4rem;">Enquiry details</h2>
+            <p style="color: var(--muted); font-size: 0.92rem; margin-bottom: 24px;">
+              Fields marked <span style="color: var(--danger);">*</span> are required.
+            </p>
+
+            <div class="field">
+              <label for="name">Customer name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" placeholder="e.g. Anjali Sharma" autocomplete="name" required>
+              <span class="error" role="alert"></span>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="phone">Phone number <span class="req">*</span></label>
+                <input type="tel" id="phone" name="phone" inputmode="numeric" placeholder="10-digit mobile number" autocomplete="tel" maxlength="10" required>
+                <span class="hint">We call or WhatsApp on this number.</span>
+                <span class="error" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="product">Product category <span class="req">*</span></label>
+                <select id="product" name="product" required>
+                  <option value="">Select a category</option>
+                  <option>Textiles &amp; fabrics</option>
+                  <option>Bedsheets &amp; towels</option>
+                  <option>Home &amp; kitchen</option>
+                  <option>Packaged staples</option>
+                  <option>Electronics accessories</option>
+                  <option>Hardware &amp; tools</option>
+                  <option>Other (mentioned below)</option>
+                </select>
+                <span class="error" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="quality">Product quality <span class="req">*</span></label>
+                <select id="quality" name="quality" required>
+                  <option value="">Select quality</option>
+                  <option>High Quality</option>
+                  <option>Medium Quality</option>
+                  <option>Low Quality</option>
+                </select>
+                <span class="error" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" step="1" placeholder="e.g. 20">
+                <span class="hint">Metres, pieces or kg — mention the unit below.</span>
+                <span class="error" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">Requirement details</label>
+              <textarea id="message" name="message" placeholder="Sizes, colours, delivery date or any specific requirement"></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Submit enquiry</button>
+              <button type="reset" class="btn btn-danger">Reset form</button>
+            </div>
+          </form>
+
+          <div class="form-success" role="status" aria-live="polite">
+            <span class="check-big" aria-hidden="true">✓</span>
+            <h2 style="margin-bottom: 6px;">Enquiry received</h2>
+            <p style="color: var(--muted); margin: 0;">Thank you — our team will contact you on the number provided.</p>
+
+            <div class="summary"></div>
+
+            <div class="form-actions" style="justify-content: center;">
+              <button type="button" class="btn btn-primary" data-send-another>Send another enquiry</button>
+              <a href="#products" class="btn btn-ghost">Back to products</a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="panel">
+          <h3 style="font-size: 1.05rem; font-family: var(--font-body); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);">Shop details</h3>
+
+          <dl class="info-list">
+            <div>
+              <dt>Address</dt>
+              <dd>Shop No. 14, Main Bazaar Road,<br>Near Old Bus Stand</dd>
+            </div>
+            <div>
+              <dt>Phone</dt>
+              <dd><a href="tel:+919876543210">+91 98765 43210</a></dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:hello@paritraders.example">hello@paritraders.example</a></dd>
+            </div>
+            <div>
+              <dt>Opening hours</dt>
+              <dd>Monday – Saturday<br>9:30 am – 8:00 pm<br>Sunday closed</dd>
+            </div>
+            <div>
+              <dt>Delivery</dt>
+              <dd>Same-city delivery in 24 hours.<br>Courier dispatch within 48 hours.</dd>
+            </div>
+          </dl>
+
+          <a href="#products" class="btn btn-ghost" style="margin-top: 24px; width: 100%;">See the catalogue</a>
+        </aside>
+
+      </div>
+    </section>
+
+  </section>
+
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Pari Traders</h4>
+          <p>Family-run wholesale and retail traders since 1998. Textiles, home essentials and packaged goods in three honest quality tiers.</p>
+        </div>
+
+        <div>
+          <h4>Pages</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Popular</h4>
+          <ul class="footer-links">
+            <li><a href="#products">Textiles</a></li>
+            <li><a href="#products">Home &amp; kitchen</a></li>
+            <li><a href="#products">Packaged staples</a></li>
+            <li><a href="#products">Hardware &amp; tools</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Visit the shop</h4>
+          <p>Shop No. 14, Main Bazaar Road,<br>Near Old Bus Stand</p>
+          <p>Mon – Sat, 9:30 am – 8:00 pm</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <span>&copy; <span data-year>2026</span> Pari Traders. All rights reserved.</span>
+        <span>Made with care for our customers.</span>
+      </div>
+    </div>
+  </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var toggle = document.querySelector(".nav-toggle");
+  var nav = document.querySelector(".site-nav");
+
+  if (toggle && nav) {
+    toggle.addEventListener("click", function () {
+      var open = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+
+    nav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  document.querySelectorAll("[data-year]").forEach(function (node) {
+    node.textContent = new Date().getFullYear();
+  });
+
+  var filterBar = document.querySelector(".filters");
+
+  if (filterBar) {
+    var cards = document.querySelectorAll("[data-tier]");
+
+    filterBar.addEventListener("click", function (event) {
+      var button = event.target.closest("button[data-filter]");
+      if (!button) return;
+
+      filterBar.querySelectorAll("button").forEach(function (btn) {
+        btn.classList.remove("active");
+      });
+      button.classList.add("active");
+
+      var value = button.getAttribute("data-filter");
+
+      cards.forEach(function (card) {
+        var matches = value === "all" || card.getAttribute("data-tier") === value;
+        card.classList.toggle("is-hidden", !matches);
+      });
+    });
+  }
+
+  var form = document.getElementById("customer-form");
+
+  if (form) {
+    var success = document.querySelector(".form-success");
+    var summary = document.querySelector(".summary");
+
+    var validators = {
+      name: function (value) {
+        if (value.trim().length < 2) return "Please enter your full name.";
+        if (!/^[A-Za-z][A-Za-z .'-]*$/.test(value.trim())) return "Name can only contain letters and spaces.";
+        return "";
+      },
+      phone: function (value) {
+        var digits = value.replace(/\D/g, "");
+        if (!digits) return "Please enter your phone number.";
+        if (!/^[6-9]\d{9}$/.test(digits)) return "Enter a valid 10-digit Indian mobile number.";
+        return "";
+      },
+      quality: function (value) {
+        return value ? "" : "Please select a product quality.";
+      },
+      product: function (value) {
+        return value ? "" : "Please select a product category.";
+      },
+      quantity: function (value) {
+        if (!value) return "";
+        return Number(value) > 0 ? "" : "Quantity must be at least 1.";
+      }
+    };
+
+    function validateField(input) {
+      var rule = validators[input.name];
+      if (!rule) return true;
+
+      var message = rule(input.value);
+      var field = input.closest(".field");
+      var error = field.querySelector(".error");
+
+      field.classList.toggle("has-error", Boolean(message));
+      if (error) error.textContent = message;
+      input.setAttribute("aria-invalid", message ? "true" : "false");
+
+      return !message;
+    }
+
+    form.querySelectorAll("input, select, textarea").forEach(function (input) {
+      if (!validators[input.name]) return;
+
+      input.addEventListener("blur", function () {
+        validateField(input);
+      });
+
+      input.addEventListener("input", function () {
+        if (input.closest(".field").classList.contains("has-error")) {
+          validateField(input);
+        }
+      });
+    });
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      var firstInvalid = null;
+
+      form.querySelectorAll("input, select, textarea").forEach(function (input) {
+        if (!validators[input.name]) return;
+        var valid = validateField(input);
+        if (!valid && !firstInvalid) firstInvalid = input;
+      });
+
+      if (firstInvalid) {
+        firstInvalid.focus();
+        return;
+      }
+
+      var data = new FormData(form);
+
+      summary.innerHTML = "";
+      [
+        ["Name", data.get("name")],
+        ["Phone", data.get("phone")],
+        ["Product", data.get("product")],
+        ["Quality", data.get("quality")],
+        ["Quantity", data.get("quantity") || "Not specified"]
+      ].forEach(function (row) {
+        var line = document.createElement("div");
+        var label = document.createElement("strong");
+        var value = document.createElement("span");
+        label.textContent = row[0];
+        value.textContent = row[1];
+        line.appendChild(label);
+        line.appendChild(value);
+        summary.appendChild(line);
+      });
+
+      form.reset();
+      form.style.display = "none";
+      success.classList.add("show");
+      success.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+
+    form.addEventListener("reset", function () {
+      form.querySelectorAll(".field").forEach(function (field) {
+        field.classList.remove("has-error");
+      });
+      form.querySelectorAll(".error").forEach(function (error) {
+        error.textContent = "";
+      });
+    });
+
+    var sendAnother = document.querySelector("[data-send-another]");
+
+    if (sendAnother) {
+      sendAnother.addEventListener("click", function () {
+        success.classList.remove("show");
+        form.style.display = "";
+        form.querySelector("input").focus();
+      });
+    }
+  }
+});
+
+</script>
+<script>
+(function () {
+  var sections = Array.prototype.slice.call(document.querySelectorAll(".page"));
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll(".site-nav a"));
+
+  function showPage() {
+    var slug = (window.location.hash || "#home").replace("#", "");
+    if (!document.getElementById("page-" + slug)) slug = "home";
+
+    sections.forEach(function (section) {
+      section.classList.toggle("active", section.getAttribute("data-page") === slug);
+    });
+
+    navLinks.forEach(function (link) {
+      if (link.classList.contains("nav-cta")) return;
+      var isCurrent = link.getAttribute("href") === "#" + slug;
+      link.classList.toggle("active", isCurrent);
+      if (isCurrent) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+
+    window.scrollTo(0, 0);
+  }
+
+  window.addEventListener("hashchange", showPage);
+  showPage();
+})();
+</script>
+</body>
+</html>
