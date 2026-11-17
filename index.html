@@ -566,6 +566,43 @@ p {
   margin-right: 8px;
 }
 
+.product-card.has-media .media {
+  position: relative;
+  margin: -4px -4px 4px;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: rgba(11, 27, 43, 0.06);
+}
+
+.product-card.has-media .media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.product-card.has-media:hover .media img {
+  transform: scale(1.05);
+}
+
+.product-card.has-media .media .tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.product-card.has-media .media .tag-gold {
+  background: #f3e3b3;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-card.has-media .media img { transition: none; }
+  .product-card.has-media:hover .media img { transform: none; }
+}
+
 .filters {
   display: flex;
   flex-wrap: wrap;
@@ -1166,8 +1203,6 @@ p {
         <a href="#home" class="active">Home</a>
         <a href="#products">Products</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="#contact" class="nav-cta">Enquire Now</a>
     </nav>
   </div>
 </header>
@@ -1181,12 +1216,12 @@ p {
           <h1>Goods you can trust, prices you can <em>plan around</em>.</h1>
           <p class="lead">
             For over two decades Pari Traders has supplied families, shops and offices with
-            textiles, home essentials and packaged goods — in the quality tier that fits your budget.
+            building materials, textiles, home essentials and packaged goods — in the quality tier that fits your budget.
           </p>
 
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Place an Enquiry</a>
-            <a href="#products" class="btn btn-outline">Browse Products</a>
+            <a href="#products" class="btn btn-primary">Browse Products</a>
+            <a href="#about" class="btn btn-outline">About Us</a>
           </div>
         </div>
 
@@ -1354,6 +1389,27 @@ p {
         </div>
 
         <div class="grid grid-3">
+          <article class="card product-card has-media" data-tier="high">
+            <div class="media"><img src="images/cement.jpg" alt="Stacked bags of Portland cement" loading="lazy" width="960" height="640"><span class="tag tag-gold">High quality</span></div>
+            <h3>Cement (OPC &amp; PPC)</h3>
+            <p>Branded 43 and 53 grade cement for foundations, slabs and plastering.</p>
+            <p class="price">From ₹390 <small>/ bag</small></p>
+          </article>
+
+          <article class="card product-card has-media" data-tier="medium">
+            <div class="media"><img src="images/paint.jpg" alt="Open cans of coloured paint" loading="lazy" width="960" height="640"><span class="tag ">Medium quality</span></div>
+            <h3>Paints &amp; Primers</h3>
+            <p>Interior and exterior emulsions, enamels, wood finishes and wall putty.</p>
+            <p class="price">From ₹180 <small>/ litre</small></p>
+          </article>
+
+          <article class="card product-card has-media" data-tier="high">
+            <div class="media"><img src="images/steel.jpg" alt="Bundle of steel reinforcement bars" loading="lazy" width="960" height="640"><span class="tag tag-gold">High quality</span></div>
+            <h3>TMT Steel Bars</h3>
+            <p>Fe-500 and Fe-500D reinforcement bars in 8 mm to 25 mm.</p>
+            <p class="price">From ₹62 <small>/ kg</small></p>
+          </article>
+
           <article class="card product-card" data-tier="high">
             <div class="card-top">
               <span class="icon-badge" aria-hidden="true">
@@ -1366,7 +1422,6 @@ p {
             <h3>Cotton &amp; Linen Fabrics</h3>
             <p>Dress material, bedsheets, towels and shirting in three graded qualities.</p>
             <p class="price">From ₹240 <small>/ metre</small></p>
-            <a href="#contact" class="btn btn-ghost">Ask for rates</a>
           </article>
 
           <article class="card product-card" data-tier="medium">
@@ -1381,7 +1436,6 @@ p {
             <h3>Home &amp; Kitchen Essentials</h3>
             <p>Steel utensils, storage jars, spice boxes and cleaning supplies in bulk packs.</p>
             <p class="price">From ₹95 <small>/ piece</small></p>
-            <a href="#contact" class="btn btn-ghost">Ask for rates</a>
           </article>
 
           <article class="card product-card" data-tier="low">
@@ -1396,23 +1450,11 @@ p {
             <h3>Packaged Staples</h3>
             <p>Rice, pulses, sugar and tea sourced in season and packed to order.</p>
             <p class="price">From ₹58 <small>/ kg</small></p>
-            <a href="#contact" class="btn btn-ghost">Ask for rates</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" style="padding-top: 0;">
-      <div class="container">
-        <div class="cta-band">
-          <div>
-            <h2>Share your requirement, get a quote</h2>
-            <p>Tell us the product, the quality tier and the quantity — we reply with rates the same day.</p>
-          </div>
-          <a href="#contact" class="btn btn-primary">Fill the enquiry form</a>
-        </div>
-      </div>
-    </section>
 
   </section><section class="page" id="page-products" data-page="products">
 
@@ -1436,6 +1478,78 @@ p {
 
         <div class="grid grid-3">
 
+          <article class="card product-card has-media" data-tier="high">
+            <div class="media"><img src="images/cement.jpg" alt="Stacked bags of Portland cement" loading="lazy" width="960" height="640"><span class="tag tag-gold">High quality</span></div>
+            <h3>Cement (OPC &amp; PPC)</h3>
+            <p>Branded 43 and 53 grade cement for foundations, slabs and plastering.</p>
+            <ul>
+              <li>Fresh stock, 50 kg bags</li>
+              <li>Bulk loads for contractors</li>
+              <li>Delivered to your site</li>
+            </ul>
+            <p class="price">From ₹390 <small>/ bag</small></p>
+          </article>
+
+          <article class="card product-card has-media" data-tier="medium">
+            <div class="media"><img src="images/paint.jpg" alt="Open cans of coloured paint" loading="lazy" width="960" height="640"><span class="tag ">Medium quality</span></div>
+            <h3>Paints &amp; Primers</h3>
+            <p>Interior and exterior emulsions, enamels, wood finishes and wall putty.</p>
+            <ul>
+              <li>Computer-matched shades</li>
+              <li>1, 4, 10 and 20 litre packs</li>
+              <li>Primer and putty available</li>
+            </ul>
+            <p class="price">From ₹180 <small>/ litre</small></p>
+          </article>
+
+          <article class="card product-card has-media" data-tier="high">
+            <div class="media"><img src="images/steel.jpg" alt="Bundle of steel reinforcement bars" loading="lazy" width="960" height="640"><span class="tag tag-gold">High quality</span></div>
+            <h3>TMT Steel Bars</h3>
+            <p>Fe-500 and Fe-500D reinforcement bars in 8 mm to 25 mm.</p>
+            <ul>
+              <li>Standard 12 metre lengths</li>
+              <li>Sold by weight</li>
+              <li>Binding wire also stocked</li>
+            </ul>
+            <p class="price">From ₹62 <small>/ kg</small></p>
+          </article>
+
+          <article class="card product-card has-media" data-tier="medium">
+            <div class="media"><img src="images/bricks.jpg" alt="Stack of red bricks" loading="lazy" width="960" height="640"><span class="tag ">Medium quality</span></div>
+            <h3>Bricks &amp; Blocks</h3>
+            <p>Red clay bricks and concrete blocks for walls and boundary work.</p>
+            <ul>
+              <li>First-class graded bricks</li>
+              <li>Loads of 1,000 and above</li>
+              <li>Tractor or truck delivery</li>
+            </ul>
+            <p class="price">From ₹8 <small>/ piece</small></p>
+          </article>
+
+          <article class="card product-card has-media" data-tier="medium">
+            <div class="media"><img src="images/pipes.jpg" alt="Stack of plastic pipes" loading="lazy" width="960" height="640"><span class="tag ">Medium quality</span></div>
+            <h3>Pipes &amp; Fittings</h3>
+            <p>PVC and CPVC pipes with bends, elbows, valves and solvent cement.</p>
+            <ul>
+              <li>Plumbing and drainage ranges</li>
+              <li>Pressure rated pipes</li>
+              <li>Fittings sold loose or boxed</li>
+            </ul>
+            <p class="price">From ₹120 <small>/ length</small></p>
+          </article>
+
+          <article class="card product-card has-media" data-tier="low">
+            <div class="media"><img src="images/tiles.jpg" alt="Blue ceramic floor tiles" loading="lazy" width="960" height="640"><span class="tag ">Low quality</span></div>
+            <h3>Floor &amp; Wall Tiles</h3>
+            <p>Ceramic and vitrified tiles in popular sizes for homes and shops.</p>
+            <ul>
+              <li>Matching shade batches</li>
+              <li>Boxed by area</li>
+              <li>Tile adhesive and grout available</li>
+            </ul>
+            <p class="price">From ₹28 <small>/ sq ft</small></p>
+          </article>
+
           <article class="card product-card" data-tier="high">
             <div class="card-top">
               <span class="icon-badge" aria-hidden="true">
@@ -1453,7 +1567,6 @@ p {
               <li>Cut to order from 5 metres</li>
             </ul>
             <p class="price">₹420 <small>/ metre</small></p>
-            <a href="#contact" class="btn btn-ghost">Request quote</a>
           </article>
 
           <article class="card product-card" data-tier="medium">
@@ -1473,7 +1586,6 @@ p {
               <li>Sold in packs of six</li>
             </ul>
             <p class="price">₹240 <small>/ metre</small></p>
-            <a href="#contact" class="btn btn-ghost">Request quote</a>
           </article>
 
           <article class="card product-card" data-tier="low">
@@ -1493,7 +1605,6 @@ p {
               <li>Shade lots cannot be split</li>
             </ul>
             <p class="price">₹150 <small>/ metre</small></p>
-            <a href="#contact" class="btn btn-ghost">Request quote</a>
           </article>
 
           <article class="card product-card" data-tier="high">
@@ -1513,7 +1624,6 @@ p {
               <li>Sold as full sets</li>
             </ul>
             <p class="price">₹1,150 <small>/ set</small></p>
-            <a href="#contact" class="btn btn-ghost">Request quote</a>
           </article>
 
           <article class="card product-card" data-tier="medium">
@@ -1533,7 +1643,6 @@ p {
               <li>Cartons of 24 available</li>
             </ul>
             <p class="price">₹95 <small>/ piece</small></p>
-            <a href="#contact" class="btn btn-ghost">Request quote</a>
           </article>
 
           <article class="card product-card" data-tier="low">
@@ -1553,7 +1662,6 @@ p {
               <li>Best rate on full-carton orders</li>
             </ul>
             <p class="price">₹38 <small>/ piece</small></p>
-            <a href="#contact" class="btn btn-ghost">Request quote</a>
           </article>
 
           <article class="card product-card" data-tier="high">
@@ -1573,7 +1681,6 @@ p {
               <li>Monthly supply contracts available</li>
             </ul>
             <p class="price">₹58 <small>/ kg</small></p>
-            <a href="#contact" class="btn btn-ghost">Request quote</a>
           </article>
 
           <article class="card product-card" data-tier="medium">
@@ -1593,7 +1700,6 @@ p {
               <li>Mixed boxes of 20</li>
             </ul>
             <p class="price">₹140 <small>/ piece</small></p>
-            <a href="#contact" class="btn btn-ghost">Request quote</a>
           </article>
 
           <article class="card product-card" data-tier="low">
@@ -1613,20 +1719,10 @@ p {
               <li>No mixed-size returns</li>
             </ul>
             <p class="price">₹65 <small>/ box</small></p>
-            <a href="#contact" class="btn btn-ghost">Request quote</a>
           </article>
 
         </div>
 
-        <div style="margin-top: 44px;">
-          <div class="cta-band">
-            <div>
-              <h2>Need something not listed?</h2>
-              <p>We source to order. Send the item, quality tier and quantity and we will confirm availability and rate.</p>
-            </div>
-            <a href="#contact" class="btn btn-primary">Send an enquiry</a>
-          </div>
-        </div>
 
       </div>
     </section>
@@ -1717,145 +1813,6 @@ p {
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="cta-band">
-          <div>
-            <h2>Come see the stock yourself</h2>
-            <p>The shop is open Monday to Saturday, 9:30 am to 8:00 pm. Enquiries are answered the same day.</p>
-          </div>
-          <a href="#contact" class="btn btn-primary">Get in touch</a>
-        </div>
-      </div>
-    </section>
-
-  </section><section class="page" id="page-contact" data-page="contact">
-
-    <section class="page-head">
-      <div class="container">
-        <span class="eyebrow">Customer information form</span>
-        <h1>Tell us what you need</h1>
-        <p class="lead">Fill in your details and requirement. We reply with rates and availability the same working day.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container contact-layout">
-
-        <div class="panel">
-          <form id="customer-form" novalidate>
-
-            <h2 style="font-size: 1.4rem;">Enquiry details</h2>
-            <p style="color: var(--muted); font-size: 0.92rem; margin-bottom: 24px;">
-              Fields marked <span style="color: var(--danger);">*</span> are required.
-            </p>
-
-            <div class="field">
-              <label for="name">Customer name <span class="req">*</span></label>
-              <input type="text" id="name" name="name" placeholder="e.g. Anjali Sharma" autocomplete="name" required>
-              <span class="error" role="alert"></span>
-            </div>
-
-            <div class="field-row">
-              <div class="field">
-                <label for="phone">Phone number <span class="req">*</span></label>
-                <input type="tel" id="phone" name="phone" inputmode="numeric" placeholder="10-digit mobile number" autocomplete="tel" maxlength="10" required>
-                <span class="hint">We call or WhatsApp on this number.</span>
-                <span class="error" role="alert"></span>
-              </div>
-
-              <div class="field">
-                <label for="product">Product category <span class="req">*</span></label>
-                <select id="product" name="product" required>
-                  <option value="">Select a category</option>
-                  <option>Textiles &amp; fabrics</option>
-                  <option>Bedsheets &amp; towels</option>
-                  <option>Home &amp; kitchen</option>
-                  <option>Packaged staples</option>
-                  <option>Electronics accessories</option>
-                  <option>Hardware &amp; tools</option>
-                  <option>Other (mentioned below)</option>
-                </select>
-                <span class="error" role="alert"></span>
-              </div>
-            </div>
-
-            <div class="field-row">
-              <div class="field">
-                <label for="quality">Product quality <span class="req">*</span></label>
-                <select id="quality" name="quality" required>
-                  <option value="">Select quality</option>
-                  <option>High Quality</option>
-                  <option>Medium Quality</option>
-                  <option>Low Quality</option>
-                </select>
-                <span class="error" role="alert"></span>
-              </div>
-
-              <div class="field">
-                <label for="quantity">Quantity</label>
-                <input type="number" id="quantity" name="quantity" min="1" step="1" placeholder="e.g. 20">
-                <span class="hint">Metres, pieces or kg — mention the unit below.</span>
-                <span class="error" role="alert"></span>
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="message">Requirement details</label>
-              <textarea id="message" name="message" placeholder="Sizes, colours, delivery date or any specific requirement"></textarea>
-            </div>
-
-            <div class="form-actions">
-              <button type="submit" class="btn btn-primary">Submit enquiry</button>
-              <button type="reset" class="btn btn-danger">Reset form</button>
-            </div>
-          </form>
-
-          <div class="form-success" role="status" aria-live="polite">
-            <span class="check-big" aria-hidden="true">✓</span>
-            <h2 style="margin-bottom: 6px;">Enquiry received</h2>
-            <p style="color: var(--muted); margin: 0;">Thank you — our team will contact you on the number provided.</p>
-
-            <div class="summary"></div>
-
-            <div class="form-actions" style="justify-content: center;">
-              <button type="button" class="btn btn-primary" data-send-another>Send another enquiry</button>
-              <a href="#products" class="btn btn-ghost">Back to products</a>
-            </div>
-          </div>
-        </div>
-
-        <aside class="panel">
-          <h3 style="font-size: 1.05rem; font-family: var(--font-body); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);">Shop details</h3>
-
-          <dl class="info-list">
-            <div>
-              <dt>Address</dt>
-              <dd>Shop No. 14, Main Bazaar Road,<br>Near Old Bus Stand</dd>
-            </div>
-            <div>
-              <dt>Phone</dt>
-              <dd><a href="tel:+919876543210">+91 98765 43210</a></dd>
-            </div>
-            <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:hello@paritraders.example">hello@paritraders.example</a></dd>
-            </div>
-            <div>
-              <dt>Opening hours</dt>
-              <dd>Monday – Saturday<br>9:30 am – 8:00 pm<br>Sunday closed</dd>
-            </div>
-            <div>
-              <dt>Delivery</dt>
-              <dd>Same-city delivery in 24 hours.<br>Courier dispatch within 48 hours.</dd>
-            </div>
-          </dl>
-
-          <a href="#products" class="btn btn-ghost" style="margin-top: 24px; width: 100%;">See the catalogue</a>
-        </aside>
-
-      </div>
-    </section>
 
   </section>
 
@@ -1864,7 +1821,7 @@ p {
       <div class="footer-grid">
         <div>
           <h4>Pari Traders</h4>
-          <p>Family-run wholesale and retail traders since 1998. Textiles, home essentials and packaged goods in three honest quality tiers.</p>
+          <p>Family-run wholesale and retail traders since 1998. Cement, paints, steel, textiles, home essentials and packaged goods in three honest quality tiers.</p>
         </div>
 
         <div>
@@ -1873,17 +1830,17 @@ p {
             <li><a href="#home">Home</a></li>
             <li><a href="#products">Products</a></li>
             <li><a href="#about">About us</a></li>
-            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
 
         <div>
           <h4>Popular</h4>
           <ul class="footer-links">
+            <li><a href="#products">Cement &amp; paints</a></li>
             <li><a href="#products">Textiles</a></li>
             <li><a href="#products">Home &amp; kitchen</a></li>
             <li><a href="#products">Packaged staples</a></li>
-            <li><a href="#products">Hardware &amp; tools</a></li>
+            <li><a href="#products">Building materials</a></li>
           </ul>
         </div>
 
@@ -1898,7 +1855,7 @@ p {
     <div class="footer-bottom">
       <div class="container">
         <span>&copy; <span data-year>2026</span> Pari Traders. All rights reserved.</span>
-        <span>Made with care for our customers.</span>
+        <span>Photos: <a href="https://commons.wikimedia.org" rel="noopener">Wikimedia Commons</a> (CC BY, CC BY-SA, public domain)</span>
       </div>
     </div>
   </footer>
